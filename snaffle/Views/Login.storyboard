@@ -1,7 +1,90 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yKk-EO-y18">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--LoginController-->
+        <scene sceneID="bzI-bv-WGu">
+            <objects>
+                <viewController title="LoginController" id="yKk-EO-y18" customClass="LoginController" customModule="snaffle" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6FR-fx-OxE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iek-9n-fWA">
+                                <rect key="frame" x="90" y="308" width="195" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CbS-ud-kSW">
+                                <rect key="frame" x="90" y="362" width="195" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Snaffle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ioM-cq-4O6">
+                                <rect key="frame" x="90" y="142" width="195" height="35"/>
+                                <color key="backgroundColor" red="0.091290690004825592" green="0.60885804891586304" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OsW-O1-bKb">
+                                <rect key="frame" x="150" y="483" width="74" height="30"/>
+                                <color key="backgroundColor" red="0.088845475843072896" green="0.60784089793060292" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="login:" destination="yKk-EO-y18" eventType="touchUpInside" id="ATJ-mq-oBT"/>
+                                    <segue destination="bNs-XJ-8Fh" kind="show" id="gUh-jh-FcP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.21851274119715858" green="0.74725602819658132" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="OsW-O1-bKb" firstAttribute="top" secondItem="CbS-ud-kSW" secondAttribute="bottom" constant="91" id="3LG-uT-2Gv"/>
+                            <constraint firstItem="pXe-Eo-5Na" firstAttribute="trailing" secondItem="CbS-ud-kSW" secondAttribute="trailing" constant="90" id="6ft-Uc-COJ"/>
+                            <constraint firstItem="ioM-cq-4O6" firstAttribute="leading" secondItem="pXe-Eo-5Na" secondAttribute="leading" constant="90" id="9h6-xT-wh8"/>
+                            <constraint firstItem="pXe-Eo-5Na" firstAttribute="trailing" secondItem="ioM-cq-4O6" secondAttribute="trailing" constant="90" id="IuU-Zw-hqv"/>
+                            <constraint firstItem="ioM-cq-4O6" firstAttribute="top" secondItem="pXe-Eo-5Na" secondAttribute="top" constant="122" id="M7t-aT-m3w"/>
+                            <constraint firstItem="CbS-ud-kSW" firstAttribute="top" secondItem="Iek-9n-fWA" secondAttribute="bottom" constant="24" id="bsM-Px-v4r"/>
+                            <constraint firstItem="pXe-Eo-5Na" firstAttribute="trailing" secondItem="Iek-9n-fWA" secondAttribute="trailing" constant="90" id="btq-y7-gAE"/>
+                            <constraint firstItem="OsW-O1-bKb" firstAttribute="leading" secondItem="pXe-Eo-5Na" secondAttribute="leading" constant="150" id="eBM-i7-iEP"/>
+                            <constraint firstItem="Iek-9n-fWA" firstAttribute="top" secondItem="ioM-cq-4O6" secondAttribute="bottom" constant="131" id="hWW-ha-cl0"/>
+                            <constraint firstItem="pXe-Eo-5Na" firstAttribute="trailing" secondItem="OsW-O1-bKb" secondAttribute="trailing" constant="151" id="v34-zc-EiZ"/>
+                            <constraint firstItem="CbS-ud-kSW" firstAttribute="leading" secondItem="pXe-Eo-5Na" secondAttribute="leading" constant="90" id="x6c-kV-Brr"/>
+                            <constraint firstItem="Iek-9n-fWA" firstAttribute="leading" secondItem="pXe-Eo-5Na" secondAttribute="leading" constant="90" id="zxH-RE-SJg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pXe-Eo-5Na"/>
+                    </view>
+                    <connections>
+                        <outlet property="loginButton" destination="OsW-O1-bKb" id="ILU-yy-g8g"/>
+                        <outlet property="logoLabel" destination="ioM-cq-4O6" id="uka-EB-6p3"/>
+                        <outlet property="password" destination="CbS-ud-kSW" id="nbB-0F-pBy"/>
+                        <outlet property="username" destination="Iek-9n-fWA" id="NIX-5t-6Qs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="scw-xh-Mrb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.80000000000000004" y="124.58770614692655"/>
+        </scene>
+        <!--MainController-->
+        <scene sceneID="9bm-ly-95q">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="MainController" id="bNs-XJ-8Fh" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0wV-Kd-PrE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="628" y="-34"/>
+        </scene>
+    </scenes>
 </document>
